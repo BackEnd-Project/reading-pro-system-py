@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+*.log
+.idea
+.idea/workspace.xml
+classes/__pycache__/
+node_modules
+access.log
+package-lock.json
