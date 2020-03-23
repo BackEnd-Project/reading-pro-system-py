@@ -1,0 +1,9 @@
+FROM harbor.dootech.cn/doo/python:3.4-slim
+WORKDIR /mnt/
+ADD . .
+# pip3 install
+RUN pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir -r ./deprecated/depoly/requirements.txt
+# RUN start.sh
+CMD ["python3", "/mnt/RunStatisticsServer.py"]
+# EXPOSE 8080
+EXPOSE 8080

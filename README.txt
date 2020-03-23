@@ -1,0 +1,1 @@
+需要安装的包：tornado,peewee,PyMySQL,pymysql(由于驱动版本的问题，装完后需要修改，/lib/site-packages/peewee.py调整mysqlDB的引入顺序，改成先引入pymysql,然后再引入MySQLdb)

@@ -1,0 +1,285 @@
+{
+    "mappings": {
+        "mt4_users_analysis": {
+            "properties": {
+                "daily_trade": {
+                    "type": "integer"
+                },
+                "daily_rate_of_winning": {
+                    "type": "float"
+                },
+                "daily_total_pips": {
+                    "type": "float"
+                },
+                "daily_average_win_amount": {
+                    "type": "float"
+                },
+                "daily_average_win_pips": {
+                    "type": "float"
+                },
+                "daily_average_loss_amount": {
+                    "type": "float"
+                },
+                "daily_average_loss_pips": {
+                    "type": "float"
+                },
+                "daily_total_lots": {
+                    "type": "float"
+                },
+                "daily_commissions": {
+                    "type": "float"
+                },
+                "daily_longs_won": {
+                    "type": "float"
+                },
+                "daily_shorts_won": {
+                    "type": "float"
+                },
+                "daily_best_trade_amount": {
+                    "type": "float"
+                },
+                "daily_worst_trade_amount": {
+                    "type": "float"
+                },
+                "daily_worst_trade_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "daily_best_trade_pips": {
+                    "type": "float"
+                },
+                "daily_worst_trade_pips": {
+                    "type": "float"
+                },
+                "daily_worst_pips_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "daily_average_trade_length": {
+                    "type": "float"
+                },
+                "daily_profit_to_loss_ratio": {
+                    "type": "float"
+                },
+                "daily_standard_deviation": {
+                    "type": "float"
+                },
+                "daily_sharpe_ratio": {
+                    "type": "float"
+                },
+                "daily_z-score": {
+                    "type": "float"
+                },
+                "daily_expectancy_pips": {
+                    "type": "float"
+                },
+                "daily_expectancy_amount": {
+                    "type": "float"
+                },
+                "daily_absolute_gain": {
+                    "type": "float"
+                },
+                "daily_gain": {
+                    "type": "float"
+                },
+                "daily_balance_growth": {
+                    "type": "float"
+                },
+                "daily_time_weigthed_equity_rate_of_return": {
+                    "type": "float"
+                },
+                "daily_withdrawals": {
+                    "type": "float"
+                },
+                "daily_deposits": {
+                    "type": "float"
+                },
+                "daily_interest": {
+                    "type": "float"
+                },
+                "daily_profit": {
+                    "type": "float"
+                },
+                "daily_highest_balance": {
+                    "type": "float"
+                },
+                "equity": {
+                    "type": "float"
+                },
+                "balance": {
+                    "type": "float"
+                },
+                "daily_max_drawdown": {
+                    "type": "float"
+                },
+                "daily_compound_rate_of_return": {
+                    "type": "float"
+                },
+                "daily_time_weigthed_rate_of_return": {
+                    "type": "float"
+                },
+                "rate_of_winning": {
+                    "type": "float"
+                },
+                "average_win_amount": {
+                    "type": "float"
+                },
+                "average_win_pips": {
+                    "type": "float"
+                },
+                "average_loss_amount": {
+                    "type": "float"
+                },
+                "average_loss_pips": {
+                    "type": "float"
+                },
+                "longs_won": {
+                    "type": "float"
+                },
+                "shorts_won": {
+                    "type": "float"
+                },
+                "best_trade_amount": {
+                    "type": "float"
+                },
+                "best_trade_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "worst_trade_amount": {
+                    "type": "float"
+                },
+                "worst_trade_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "best_trade_pips": {
+                    "type": "float"
+                },
+                "best_pips_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "worst_trade_pips": {
+                    "type": "float"
+                },
+                "worst_pips_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "average_trade_length": {
+                    "type": "float"
+                },
+                "profit_to_loss_ratio": {
+                    "type": "float"
+                },
+                "standard_deviation": {
+                    "type": "float"
+                },
+                "sharpe_ratio": {
+                    "type": "float"
+                },
+                "z-score": {
+                    "type": "float"
+                },
+                "expectancy_pips": {
+                    "type": "float"
+                },
+                "expectancy_amount": {
+                    "type": "float"
+                },
+                "monthly_compound_rate_of_return": {
+                    "type": "float"
+                },
+                "absolute_gain": {
+                    "type": "float"
+                },
+                "time_weigthed_equity_rate_of_return": {
+                    "type": "float"
+                },
+                "max_drawdown": {
+                    "type": "float"
+                },
+                "time_weigthed_rate_of_return": {
+                    "type": "float"
+                },
+                "daily_best_trade_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "daily_best_pips_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "week_rate_of_winning": {
+                    "type": "float"
+                },
+                "one_week_rate_of_winning": {
+                    "type": "float"
+                },
+                "one_month_rate_of_winning": {
+                    "type": "float"
+                },
+                "month_rate_of_winning": {
+                    "type": "float"
+                },
+                "three_month_rate_of_winning": {
+                    "type": "float"
+                },
+                "six_month_rate_of_winning": {
+                    "type": "float"
+                },
+                "year_rate_of_winning": {
+                    "type": "float"
+                },
+                "week_gain": {
+                    "type": "float"
+                },
+                "month_gain": {
+                    "type": "float"
+                },
+                "one_week_gain": {
+                    "type": "float"
+                },
+                "one_month_gain": {
+                    "type": "float"
+                },
+                "three_month_gain": {
+                    "type": "float"
+                },
+                "six_month_gain": {
+                    "type": "float"
+                },
+                "year_gain": {
+                    "type": "float"
+                },
+                "daily_equity_gain": {
+                    "type": "float"
+                },
+                "account_id": {
+                    "type": "keyword"
+                },
+                "analysis_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "login": {
+                    "type": "integer"
+                },
+                "time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "mark": {
+                    "type": "integer"
+                },
+                "gain_product": {
+                    "type": "float"
+                },
+                "equity_gain_product": {
+                    "type": "float"
+                }
+            }
+        }
+    }
+}

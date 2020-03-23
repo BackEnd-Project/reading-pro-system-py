@@ -1,0 +1,70 @@
+{
+    "mappings": {
+        "user": {
+            "properties": {
+                "uuid": {
+                    "type": "keyword"
+                },
+                "uhead": {
+                    "type": "text"
+                },
+                "uname": {
+                    "type": "keyword"
+                },
+                "uphone": {
+                    "type": "keyword"
+                },
+                "hash_uphone": {
+                    "type": "keyword"
+                },
+                "uphonecode": {
+                    "type": "keyword"
+                },
+                "uemail": {
+                    "type": "keyword"
+                },
+                "hash_uemail": {
+                    "type": "keyword"
+                },
+                "upassword": {
+                    "type": "text"
+                },
+                "country": {
+                    "type": "text"
+                },
+                "province": {
+                    "type": "text"
+                },
+                "city": {
+                    "type": "text"
+                },
+                "address": {
+                    "type": "text"
+                },
+                "usex": {
+                    "type": "text"
+                },
+                "birthday": {
+                    "type": "text"
+                },
+                "remark": {
+                    "type": "text"
+                },
+                 "is_deleted": {
+                    "type": "integer"
+                },
+                 "enabled": {
+                    "type": "integer"
+                },
+                "update_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "create_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                }
+            }
+        }
+    }
+}
