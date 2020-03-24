@@ -1,0 +1,15 @@
+demjson
+pika
+redis
+requests
+pycryptodome
+urllib3
+elasticsearch
+peewee
+pymysql3
+wtforms
+certifi
+apscheduler
+tornado
+beautifulsoup4
+bs4

@@ -30,6 +30,7 @@ import demjson
 import certifi
 import hashlib
 import logging
+from config import *
 from classes.RabbitMQ import RabbitMQ
 from playhouse.pool import PooledMySQLDatabase
 import json
@@ -280,8 +281,6 @@ def get_rabbitmq():
 
 def get_mysql(mysql1):
     mysql2 = eval(mysql1)
-    print("db:{} host:{}, port:{}, user:{} ".format(mysql2['db'], mysql2['host'], int(mysql2['port']),
-                                                    mysql2['user']))
     database = PooledMySQLDatabase(database=mysql2['db'], max_connections=300, **{
         'host': mysql2['host'],
         'port': int(mysql2['port']),
@@ -376,4 +375,4 @@ class DateTimeEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, obj)
 
 
-__all__ = ['toJson', 'getDate', 'getIndexTrades', 'getIndexBalance', 'create_uuid', 'generateGID']
+__all__ = ['get_mysql', 'toJson', 'getDate', 'getIndexTrades', 'getIndexBalance', 'create_uuid', 'generateGID']

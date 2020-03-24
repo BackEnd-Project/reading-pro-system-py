@@ -6,13 +6,14 @@
 from .BaseHandler import BaseHandler
 from service.sCheck import sCheck
 
+
 class CheckHandler(BaseHandler):
     service = sCheck()
 
     def get(self, xxx):
         """
         Check接口
-        :param eid:
+        :param xxx:
         :return:
         """
 

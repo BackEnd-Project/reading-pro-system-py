@@ -21,7 +21,8 @@
  *    '
 """
 
-import os, base64
+import os
+import base64
 from hashlib import sha256
 from hmac import HMAC
 from Crypto.Cipher import AES
@@ -64,7 +65,8 @@ def validate_password(hashed, input_password):
     """
     try:
         hashed_bytes = base64.b64decode(bytes(hashed, encoding="utf8"))
-        return hashed == encrypt_password(input_password, salt=hashed_bytes[:8])
+        return hashed == encrypt_password(
+            input_password, salt=hashed_bytes[:8])
     except Exception:
         return False
 
@@ -107,7 +109,8 @@ class CommonAESCipher:
         :param s:
         :return:
         """
-        return s + (self.BS - len(s) % self.BS) * chr(self.BS - len(s) % self.BS)
+        return s + (self.BS - len(s) % self.BS) * \
+            chr(self.BS - len(s) % self.BS)
 
     def unpad(self, s):
         """
@@ -127,7 +130,8 @@ class CommonAESCipher:
         raw = self.pad(raw)
         iv = Random.new().read(AES.block_size)
         cipher = AES.new(self.key, AES.MODE_CBC, iv)
-        return base64.urlsafe_b64encode(iv + cipher.encrypt(raw.encode())).decode()
+        return base64.urlsafe_b64encode(
+            iv + cipher.encrypt(raw.encode())).decode()
 
     def common_decrypt(self, enc):
         """
@@ -154,8 +158,9 @@ class AESCipher:
         self.key = self.key.encode('utf-8')
         self.iv = "IB9N75V82Q0KJ3BK".encode('utf-8')
         self.BLOCK_SIZE = 16  # Bytes
-        self.pad = lambda s: s + (self.BLOCK_SIZE - len(s.encode('utf-8')) % self.BLOCK_SIZE) * chr(
-            self.BLOCK_SIZE - len(s.encode('utf-8')) % self.BLOCK_SIZE)
+        self.pad = lambda s: s + (self.BLOCK_SIZE - len(s.encode('utf-8')) %
+                                  self.BLOCK_SIZE) * chr(self.BLOCK_SIZE - len(s.encode('utf-8')) %
+                                                         self.BLOCK_SIZE)
         self.unpad = lambda s: s[:-ord(s[len(s) - 1:])]
 
     def encrypt(self, raw):

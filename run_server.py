@@ -21,7 +21,13 @@
  *    '
 """
 
-import tornado.web, tornado.ioloop, os, logging, config, error, sys
+import tornado.web
+import tornado.ioloop
+import os
+import logging
+import config
+import error
+import sys
 from config.tornado_routers import routers
 from tornado.options import define
 from common.SystemCheck import SystemCheck
@@ -38,11 +44,10 @@ if os.getenv('DOO_ENV', 'dev') == 'dev':
 if os.getenv('DOO_ENV', 'dev') == 'debug':
     log_level = logging.DEBUG
 
-logging.basicConfig(level=log_level,
-                    format='%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s',
-                    datefmt='%Y-%m-%d %H:%M:%S')
-
-logging.getLogger('elasticsearch').setLevel(logging.WARNING)
+logging.basicConfig(
+    level=log_level,
+    format='%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S')
 
 logging.getLogger('apscheduler').setLevel(logging.WARNING)
 
