@@ -93,7 +93,7 @@ class sUser():
             condition = condition & (getattr(User, key) == kwargs[key])
 
         user_list = []
-        if pagesize is None or pagesize is 0:
+        if pagesize is None or pagesize == 0:
             # 判断是否需要分页返回数据
             for item in User.select().order_by(User.create_time.desc()).where(condition).dicts():
                 user_list.append(item)
@@ -104,9 +104,9 @@ class sUser():
         total_counts = User.select().where(condition).count()
         database.close()
         for items in user_list:
-            if items['create_time'] is not None and items['create_time'] is not '':
+            if items['create_time'] is not None and items['create_time'] != '':
                 items['create_time'] = common.datetime_to_string(items['create_time'])
-            if items['update_time'] is not None and items['update_time'] is not '':
+            if items['update_time'] is not None and items['update_time'] != '':
                 items['update_time'] = common.datetime_to_string(items['update_time'])
         # 返回数据列表
         return user_list, total_counts

@@ -40,7 +40,7 @@ def setting_create(input_dict):
 
 def setting_delete(input_dict):
     rules = {
-        "id": [Required, lambda x: (isinstance(x, str) and x is not '')],
+        "id": [Required, lambda x: (isinstance(x, str) and x != '')],
     }
     errors = {
         "id": "id is not existed or invalid",

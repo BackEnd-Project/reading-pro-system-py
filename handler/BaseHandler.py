@@ -25,7 +25,7 @@ class BaseHandler(tornado.web.RequestHandler):
         # 在body中的json数据
         request_json = self.request.body.decode('utf-8')
         request_dict = {}
-        if request_json is not None and request_json is not "":
+        if request_json is not None and request_json != "":
             request_dict = json.loads(request_json)
         # 获取在请求url中的数据
         for key in self.request.arguments.keys():

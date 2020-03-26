@@ -33,7 +33,7 @@ class UserHandler(BaseHandler):
         del self.arguments['appid']
         try:
             # validate.billing_get(self.arguments)
-            if uid is not None and uid is not '':
+            if uid is not None and uid != '':
                 self.arguments['uid'] = uid
                 result = self.service.get_info(**self.arguments)
                 self.echoJson(0, result)

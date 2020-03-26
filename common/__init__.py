@@ -247,7 +247,7 @@ def data_unique(data_list):
     :param data_list:
     :return:
     """
-    if len(data_list) is 0:
+    if len(data_list) == 0:
         return []
     temp_list = list(set([str(i) for i in data_list]))
     li = [eval(i) for i in temp_list]
